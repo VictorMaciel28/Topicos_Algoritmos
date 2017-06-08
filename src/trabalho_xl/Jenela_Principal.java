@@ -48,7 +48,7 @@ public class Jenela_Principal extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(102, 153, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 1200));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\joliecerta.jpg")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Victor\\Projeto_xl\\Topicos_Algoritmos\\joliecerta.jpg")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -74,7 +74,7 @@ public class Jenela_Principal extends javax.swing.JFrame {
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -98,7 +98,7 @@ public class Jenela_Principal extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(0, 0, 300, 570);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\background.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Victor\\Projeto_xl\\Topicos_Algoritmos\\background.jpg")); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 900, 600);
