@@ -8,7 +8,7 @@ public class Conectar {
     private static Connection conn;
     private static final String driver ="com.mysql.jdbc.Driver";
     private static final String user = "root";
-    private static final String password = "root";
+    private static final String password = "";
     private static String url = "jdbc:mysql://localhost:3306/mydb";
     
     public Conectar(){

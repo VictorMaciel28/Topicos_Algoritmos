@@ -5,18 +5,16 @@
  */
 package trabalho_xl;
 
-import static javax.swing.WindowConstants.HIDE_ON_CLOSE;
-
 /**
  *
  * @author Guilherme Senra
  */
-public class Tela_Imagem extends javax.swing.JPanel {
+public class Tela_img extends javax.swing.JFrame {
 
     /**
-     * Creates new form Tela_Imagem
+     * Creates new form Tela_img
      */
-    public Tela_Imagem() {
+    public Tela_img() {
         initComponents();
     }
 
@@ -29,7 +27,7 @@ public class Tela_Imagem extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -45,33 +43,31 @@ public class Tela_Imagem extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(900, 600));
         setPreferredSize(new java.awt.Dimension(900, 600));
-        setLayout(null);
+        setResizable(false);
+        getContentPane().setLayout(null);
 
-        jButton1.setText("<--");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        add(jButton1);
-        jButton1.setBounds(10, 530, 73, 23);
+        jPanel1.setMinimumSize(new java.awt.Dimension(900, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(900, 600));
+        jPanel1.setLayout(null);
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\jolie2.jpg")); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(500, 425));
-        add(jLabel2);
+        jPanel1.add(jLabel2);
         jLabel2.setBounds(200, 0, 500, 425);
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\trajedy.jpg")); // NOI18N
-        add(jLabel3);
+        jPanel1.add(jLabel3);
         jLabel3.setBounds(725, 60, 150, 150);
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\transporte.png")); // NOI18N
-        add(jLabel4);
+        jPanel1.add(jLabel4);
         jLabel4.setBounds(25, 300, 150, 150);
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\seguranca.png")); // NOI18N
-        add(jLabel5);
+        jPanel1.add(jLabel5);
         jLabel5.setBounds(25, 55, 150, 150);
 
         jLabel6.setBackground(new java.awt.Color(153, 153, 153));
@@ -79,7 +75,7 @@ public class Tela_Imagem extends javax.swing.JPanel {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Lazer");
         jLabel6.setPreferredSize(new java.awt.Dimension(150, 30));
-        add(jLabel6);
+        jPanel1.add(jLabel6);
         jLabel6.setBounds(710, 30, 150, 30);
 
         jLabel7.setBackground(new java.awt.Color(153, 153, 153));
@@ -87,7 +83,7 @@ public class Tela_Imagem extends javax.swing.JPanel {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Segurança");
         jLabel7.setPreferredSize(new java.awt.Dimension(150, 30));
-        add(jLabel7);
+        jPanel1.add(jLabel7);
         jLabel7.setBounds(10, 20, 150, 30);
 
         jLabel8.setBackground(new java.awt.Color(153, 153, 153));
@@ -95,7 +91,7 @@ public class Tela_Imagem extends javax.swing.JPanel {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Transporte");
         jLabel8.setPreferredSize(new java.awt.Dimension(150, 30));
-        add(jLabel8);
+        jPanel1.add(jLabel8);
         jLabel8.setBounds(10, 260, 150, 30);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(500, 100));
@@ -105,7 +101,7 @@ public class Tela_Imagem extends javax.swing.JPanel {
         jTextArea1.setPreferredSize(new java.awt.Dimension(500, 100));
         jScrollPane1.setViewportView(jTextArea1);
 
-        add(jScrollPane1);
+        jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(200, 450, 500, 100);
 
         jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\propaganda.jpg")); // NOI18N
@@ -115,49 +111,80 @@ public class Tela_Imagem extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2);
+        jPanel1.add(jButton2);
         jButton2.setBounds(725, 270, 150, 300);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("08");
-        add(jLabel9);
+        jPanel1.add(jLabel9);
         jLabel9.setBounds(90, 460, 22, 22);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("10");
-        add(jLabel10);
+        jPanel1.add(jLabel10);
         jLabel10.setBounds(790, 220, 22, 22);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("05");
-        add(jLabel11);
+        jPanel1.add(jLabel11);
         jLabel11.setBounds(90, 220, 22, 22);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\background.jpg")); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
-        add(jLabel1);
+        jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 900, 600);
 
-        getAccessibleContext().setAccessibleParent(this);
-    }// </editor-fold>//GEN-END:initComponents
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 900, 600);
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.setVisible(false);
-        new Jenela_Principal().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-    Popup pop1 = new Popup();
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+    Popup pop1= new Popup();
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(!pop1.isVisible()) pop1.setVisible(true);
         pop1.setDefaultCloseOperation(HIDE_ON_CLOSE);
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Tela_img.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Tela_img.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Tela_img.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Tela_img.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Tela_img().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -170,15 +197,8 @@ public class Tela_Imagem extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
-
-    private void setContentPane(Feed panel) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    Object getContentPane() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

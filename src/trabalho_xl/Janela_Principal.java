@@ -11,12 +11,12 @@ import java.sql.Connection;
  *
  * @author Guilherme Senra
  */
-public class Jenela_Principal extends javax.swing.JFrame {
+public class Janela_Principal extends javax.swing.JFrame {
     Conectar con;
     /**
      * Creates new form Jenela_Principal
      */
-    public Jenela_Principal() {
+    public Janela_Principal() {
         initComponents();
     }
 
@@ -36,13 +36,16 @@ public class Jenela_Principal extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(225, 50));
+        setMinimumSize(new java.awt.Dimension(900, 600));
         setResizable(false);
+        setSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(400, 600));
@@ -51,7 +54,6 @@ public class Jenela_Principal extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(102, 153, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 1200));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Victor\\Projeto_xl\\Topicos_Algoritmos\\joliecerta.jpg")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -101,11 +103,6 @@ public class Jenela_Principal extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(0, 0, 300, 570);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Victor\\Projeto_xl\\Topicos_Algoritmos\\background.jpg")); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 900, 600);
-
         jButton6.setText("Conectar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,7 +110,7 @@ public class Jenela_Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(700, 600, 93, 23);
+        jButton6.setBounds(680, 530, 93, 23);
 
         jButton7.setText("Desconectar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -122,18 +119,30 @@ public class Jenela_Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(790, 600, 110, 23);
+        jButton7.setBounds(770, 530, 110, 23);
+
+        jButton8.setText("Adicionar Foto");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8);
+        jButton8.setBounds(310, 530, 120, 23);
+
+        jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 900, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    Tela_img ti= new Tela_img();
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Tela_Imagem panel = new Tela_Imagem();
-        this.setContentPane(panel);
-        this.getContentPane().repaint();
-        this.validate();
+        if(!ti.isVisible()) ti.setVisible(true);
+        ti.setDefaultCloseOperation(HIDE_ON_CLOSE);
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    
+   
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         con = new Conectar();
         Connection reg = con.getConnection();
@@ -144,6 +153,11 @@ public class Jenela_Principal extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         con.Desconectar();
     }//GEN-LAST:event_jButton7ActionPerformed
+    Tela_cadastro tc= new Tela_cadastro();
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        if(!tc.isVisible()) tc.setVisible(true);
+        tc.setDefaultCloseOperation(HIDE_ON_CLOSE);
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,20 +176,21 @@ public class Jenela_Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jenela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jenela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jenela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jenela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jenela_Principal().setVisible(true);
+                new Janela_Principal().setVisible(true);
                 
             }
         });
@@ -189,6 +204,7 @@ public class Jenela_Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
