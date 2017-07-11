@@ -5,6 +5,21 @@
  */
 package trabalho_xl;
 
+
+import java.awt.Image;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Guilherme Senra
@@ -27,30 +42,224 @@ public class Tela_cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel9 = new javax.swing.JLabel();
+
+        jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(800, 100));
-        setMinimumSize(new java.awt.Dimension(300, 600));
+        setMinimumSize(new java.awt.Dimension(600, 600));
         setPreferredSize(new java.awt.Dimension(300, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel1.setMinimumSize(new java.awt.Dimension(300, 600));
-        jPanel1.setLayout(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(50, 320, 170, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\background.jpg")); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 300, 620);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 300, 640);
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(270, 330, 260, 110);
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Local:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 320, 34, 14);
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Cidade:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(10, 360, 50, 14);
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(50, 400, 170, 30);
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Estado: ");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 400, 50, 14);
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Transporte:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(20, 450, 70, 14);
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(90, 440, 30, 30);
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(50, 360, 170, 30);
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Segurança:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(20, 490, 70, 14);
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField5);
+        jTextField5.setBounds(90, 480, 30, 30);
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Lazer:");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(160, 450, 40, 14);
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField6);
+        jTextField6.setBounds(200, 440, 30, 30);
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Observações:");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(270, 300, 80, 20);
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(120, 20, 350, 220);
+
+        jTextField7.setText("Selecionar Imagem");
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField7);
+        jTextField7.setBounds(260, 450, 140, 30);
+
+        jToggleButton1.setText("Inserir!");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jToggleButton1);
+        jToggleButton1.setBounds(420, 450, 110, 30);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\background.jpg")); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(0, 0, 570, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+    JFileChooser archivo=new JFileChooser();
+    int ventana=archivo.showOpenDialog(null);
+    if (ventana==JFileChooser.APPROVE_OPTION){
+        File file=archivo.getSelectedFile();
+        jTextField7.setText(String.valueOf(file));
+        Image foto=getToolkit().getImage(jTextField7.getText());
+        jLabel11.setIcon(new ImageIcon(foto));
+    }
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        Connection conectar=null;
+        try{
+            try {
+               
+                Class.forName("com.mysql.jdbc.Driver");
+                conectar= DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","");
+                                System.out.println("Conexao bem sucedida.2");
+            } catch (ClassNotFoundException ex) {
+               System.out.print("Deu");
+            }
+            try{
+            
+            }
+            catch(Exception e){
+                System.out.println("NAO FOI");
+            }
+            String inserir = "INSERT INTO Imagem "+"(idImagem,idLocal,descricao,seguranca,transporte,lazer,Imagem)"+"VALUES(?,1,?,?,?,?,?)";
+            PreparedStatement pst=conectar.prepareStatement(inserir);
+            FileInputStream archivofoto;
+            
+            pst.setString(3,jTextArea1.getText());
+            pst.setString(4,jTextField5.getText());
+            pst.setString(5,jTextField4.getText());
+            pst.setString(6,jTextField6.getText());
+            archivofoto= new FileInputStream(jTextField7.getText());
+                pst.setBinaryStream(7, archivofoto);
+            int i=pst.executeUpdate();
+            if(i>0){
+                JOptionPane.showMessageDialog(null,"Inserido com muito secesso!");
+            }else{
+                JOptionPane.showMessageDialog(null,"Ocorreu algum erro.");
+            }
+
+        }catch (SQLException ex) {
+            Logger.getLogger(Conectar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Tela_cadastro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -77,7 +286,7 @@ public class Tela_cadastro extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Tela_cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -88,6 +297,24 @@ public class Tela_cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,12 +5,19 @@
  */
 package trabalho_xl;
 
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.Connection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import trabalho_xl.GoogleMaps;
 
-/**
- *
- * @author Guilherme Senra
- */
+
 public class Janela_Principal extends javax.swing.JFrame {
     Conectar con;
     /**
@@ -39,6 +46,9 @@ public class Janela_Principal extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        mapaLable = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,18 +64,33 @@ public class Janela_Principal extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(102, 153, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 1200));
 
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\5bt.jpg")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\2bt.jpg")); // NOI18N
         jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\3bt.jpg")); // NOI18N
         jButton3.setText("jButton3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
+        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\1bt.jpg")); // NOI18N
         jButton4.setText("jButton4");
 
+        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\4bt.jpg")); // NOI18N
         jButton5.setText("jButton5");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -74,18 +99,20 @@ public class Janela_Principal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addContainerGap()
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -95,13 +122,13 @@ public class Janela_Principal extends javax.swing.JFrame {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 0, 300, 570);
+        jScrollPane1.setBounds(0, 0, 300, 550);
 
         jButton6.setText("Conectar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +137,7 @@ public class Janela_Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(680, 530, 93, 23);
+        jButton6.setBounds(680, 630, 93, 23);
 
         jButton7.setText("Desconectar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +146,7 @@ public class Janela_Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(770, 530, 110, 23);
+        jButton7.setBounds(780, 630, 110, 23);
 
         jButton8.setText("Adicionar Foto");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +157,28 @@ public class Janela_Principal extends javax.swing.JFrame {
         getContentPane().add(jButton8);
         jButton8.setBounds(310, 530, 120, 23);
 
+        mapaLable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mapaLableMouseClicked(evt);
+            }
+        });
+        getContentPane().add(mapaLable);
+        mapaLable.setBounds(304, 4, 583, 520);
+
+        jLabel2.setText("Buscar o Local:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(550, 530, 140, 30);
+
+        jTextField1.setText("Rio de Janeiro");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(640, 530, 150, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\background.jpg")); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 900, 600);
@@ -141,8 +190,28 @@ public class Janela_Principal extends javax.swing.JFrame {
         if(!ti.isVisible()) ti.setVisible(true);
         ti.setDefaultCloseOperation(HIDE_ON_CLOSE);
     }//GEN-LAST:event_jButton1ActionPerformed
-    
-   
+    private void atualizaMapa(){   
+    String chave="";
+        int zoom = 12;
+        String tipo = "satellite";
+        String endereco = "http://maps.googleapis.com/maps/api/staticmap?center=-22.8632,-43.1792&zoom=" + zoom + "&size=640x640&maptype=" + tipo + "&key="+chave+"&sensor=false&format=jpg";
+        BufferedImage img = null;
+
+        try {
+            URL url = new URL(endereco);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            img = ImageIO.read(con.getInputStream());
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(GoogleMaps.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(GoogleMaps.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        if (img != null) {
+            ImageIcon mapa = new ImageIcon(img);
+            mapaLable.setIcon(mapa);
+        }
+    }
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         con = new Conectar();
         Connection reg = con.getConnection();
@@ -158,6 +227,43 @@ public class Janela_Principal extends javax.swing.JFrame {
         if(!tc.isVisible()) tc.setVisible(true);
         tc.setDefaultCloseOperation(HIDE_ON_CLOSE);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void mapaLableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mapaLableMouseClicked
+        int zoom = 12;
+         String tipo = "satellite";
+    
+        String chave="";
+        
+        String endereco = "http://maps.googleapis.com/maps/api/staticmap?center=-22.8634,-43.1792&zoom=" + zoom + "&size=640x640&maptype=" + tipo + "&key="+chave+"&sensor=false&format=jpg";
+        BufferedImage img = null;
+
+        try {
+            URL url = new URL(endereco);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            img = ImageIO.read(con.getInputStream());
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(GoogleMaps.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(GoogleMaps.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        if (img != null) {
+            ImageIcon mapa = new ImageIcon(img);
+            mapaLable.setIcon(mapa);
+        }
+    }//GEN-LAST:event_mapaLableMouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,6 +299,7 @@ public class Janela_Principal extends javax.swing.JFrame {
                 new Janela_Principal().setVisible(true);
                 
             }
+            
         });
     }
 
@@ -206,7 +313,10 @@ public class Janela_Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel mapaLable;
     // End of variables declaration//GEN-END:variables
 }

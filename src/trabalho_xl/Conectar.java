@@ -9,20 +9,22 @@ public class Conectar {
     private static final String driver ="com.mysql.jdbc.Driver";
     private static final String user = "root";
     private static final String password = "";
-    private static String url = "jdbc:mysql://localhost:3306/mydb";
+    private static String url = "jdbc:mysql://localhost:3306/teste";
     
+    @SuppressWarnings("UseSpecificCatch")
     public Conectar(){
         conn = null;
-        try{
+        try{            
             Class.forName(driver);
             conn = DriverManager.getConnection(url, user, password);
             if (conn != null){
-                System.out.println("FOI CARAIO");
+                System.out.println("Conexao bem sucedida.");
             }
         }catch(Exception e){
-            System.out.println("NAO FOI CARAIO");
+            System.out.println("Conexao mal sucedida");
         }
     }
+    
     
     // METODO QUE RETORNA A CONEXAO
     public Connection getConnection(){

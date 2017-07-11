@@ -41,6 +41,9 @@ public class Tela_img extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,22 +56,17 @@ public class Tela_img extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(900, 600));
         jPanel1.setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\jolie2.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\5ti.jpg")); // NOI18N
+        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel2.setPreferredSize(new java.awt.Dimension(500, 425));
         jPanel1.add(jLabel2);
         jLabel2.setBounds(200, 0, 500, 425);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\trajedy.jpg")); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(725, 60, 150, 150);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\transporte.png")); // NOI18N
+        jLabel3.setBounds(725, 60, 0, 0);
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(25, 300, 150, 150);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\seguranca.png")); // NOI18N
+        jLabel4.setBounds(25, 300, 0, 0);
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(25, 55, 150, 150);
+        jLabel5.setBounds(25, 55, 0, 0);
 
         jLabel6.setBackground(new java.awt.Color(153, 153, 153));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -76,7 +74,7 @@ public class Tela_img extends javax.swing.JFrame {
         jLabel6.setText("Lazer");
         jLabel6.setPreferredSize(new java.awt.Dimension(150, 30));
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(710, 30, 150, 30);
+        jLabel6.setBounds(760, 40, 90, 30);
 
         jLabel7.setBackground(new java.awt.Color(153, 153, 153));
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -84,15 +82,16 @@ public class Tela_img extends javax.swing.JFrame {
         jLabel7.setText("Segurança");
         jLabel7.setPreferredSize(new java.awt.Dimension(150, 30));
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(10, 20, 150, 30);
+        jLabel7.setBounds(30, 20, 150, 30);
 
         jLabel8.setBackground(new java.awt.Color(153, 153, 153));
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Transporte");
+        jLabel8.setToolTipText("");
         jLabel8.setPreferredSize(new java.awt.Dimension(150, 30));
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(10, 260, 150, 30);
+        jLabel8.setBounds(30, 270, 150, 30);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(500, 100));
 
@@ -104,7 +103,7 @@ public class Tela_img extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(200, 450, 500, 100);
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\propaganda.jpg")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\19848802_1352783801496170_144289347_n.jpg")); // NOI18N
         jButton2.setPreferredSize(new java.awt.Dimension(150, 300));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,21 +117,33 @@ public class Tela_img extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("08");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(90, 460, 22, 22);
+        jLabel9.setBounds(90, 450, 22, 22);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("10");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(790, 220, 22, 22);
+        jLabel10.setBounds(790, 210, 22, 22);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("05");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(90, 220, 22, 22);
+        jLabel11.setBounds(90, 210, 22, 22);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Guilherme Senra\\Documents\\Area de Trabalho\\Estudo\\faculdade\\Tópicos em Algoritmos\\Projeto_xl\\Trabalho_xl\\background.jpg")); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\SEGURANCAA.jpg")); // NOI18N
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(20, 50, 160, 160);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\TRANSPORTEe.jpg")); // NOI18N
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(20, 300, 150, 150);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\aaa.jpg")); // NOI18N
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(720, 70, 150, 140);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\background.jpg")); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 900, 600);
@@ -189,6 +200,9 @@ public class Tela_img extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
