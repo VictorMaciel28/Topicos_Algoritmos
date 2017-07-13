@@ -20,6 +20,7 @@ import trabalho_xl.GoogleMaps;
 
 public class Janela_Principal extends javax.swing.JFrame {
     Conectar con;
+
     /**
      * Creates new form Jenela_Principal
      */
@@ -137,7 +138,7 @@ public class Janela_Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(680, 630, 93, 23);
+        jButton6.setBounds(740, 530, 93, 23);
 
         jButton7.setText("Desconectar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +168,7 @@ public class Janela_Principal extends javax.swing.JFrame {
 
         jLabel2.setText("Buscar o Local:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(550, 530, 140, 30);
+        jLabel2.setBounds(500, 530, 140, 30);
 
         jTextField1.setText("Rio de Janeiro");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -176,7 +177,7 @@ public class Janela_Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(640, 530, 150, 30);
+        jTextField1.setBounds(580, 530, 150, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\background.jpg")); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(900, 600));

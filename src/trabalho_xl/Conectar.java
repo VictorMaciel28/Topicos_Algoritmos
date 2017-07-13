@@ -1,42 +1,82 @@
 package trabalho_xl;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class Conectar {
+    Connection c = null;
+    Statement stmt = null;
+    Connection conn = null;
     
-    private static Connection conn;
-    private static final String driver ="com.mysql.jdbc.Driver";
-    private static final String user = "root";
-    private static final String password = "";
-    private static String url = "jdbc:mysql://localhost:3306/teste";
-    
-    @SuppressWarnings("UseSpecificCatch")
     public Conectar(){
-        conn = null;
         try{            
-            Class.forName(driver);
-            conn = DriverManager.getConnection(url, user, password);
-            if (conn != null){
-                System.out.println("Conexao bem sucedida.");
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:C:\\sqlite\\gui\\SQLiteStudio\\mydb.db");
+            if (c != null){
+                JOptionPane.showMessageDialog(null, "Meio que foi.");
             }
+            
+            stmt = c.createStatement();
+            String sql ="CREATE TABLE AAAAA (" +
+                        "idProimg INT NOT NULL)"; 
+            
+            stmt.executeUpdate(sql);
+            stmt.close();
+         
+            c.close();
+            
         }catch(Exception e){
-            System.out.println("Conexao mal sucedida");
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
+    public void Inserir(){
+            try{
+            
+            Class.forName("org.sqlite.JDBC");
+            conn = DriverManager.getConnection("jdbc:sqlite:C:\\sqlite\\gui\\SQLiteStudio\\mydb.db"); 
+            if (conn != null){
+                JOptionPane.showMessageDialog(null, "Meio que foi.");
+            }
+            
+            String sql = "INSERT INTO Imagem (idImagem,idLocal,descricao,seguranca,transporte,lazer,Imagem) VALUES('6','1','DROGA','null','null','null','null')";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+           
+            
+            int i=stmt.executeUpdate(sql);
+            if(i>0){
+                JOptionPane.showMessageDialog(null,"Inserido com muito secesso!");
+            }else{
+                JOptionPane.showMessageDialog(null,"Ocorreu algum erro.");
+            }
+            stmt.close();
+            conn.close();
+
+        }catch (SQLException ex) {
+            Logger.getLogger(Conectar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Tela_cadastro.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
     
     // METODO QUE RETORNA A CONEXAO
     public Connection getConnection(){
-        return conn;
+        return c;
     }
     
     // METODO QUE DESCONECTA A CONXEAO
     public void Desconectar(){
-        conn=null;
-        if (conn == null){
+        c=null;
+        if (c == null){
             System.out.println("VC FECHOU A CONEXAO");
         }
+    }
+    
+    public Connection Insere(){
+        return conn;
     }
     
     

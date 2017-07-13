@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -26,6 +27,8 @@ import javax.swing.JOptionPane;
  */
 public class Tela_cadastro extends javax.swing.JFrame {
 
+    Statement stmt = null;
+    Inserir conn;
     /**
      * Creates new form Tela_cadastro
      */
@@ -205,45 +208,8 @@ public class Tela_cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        Connection conectar=null;
-        try{
-            try {
-               
-                Class.forName("com.mysql.jdbc.Driver");
-                conectar= DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","");
-                                System.out.println("Conexao bem sucedida.2");
-            } catch (ClassNotFoundException ex) {
-               System.out.print("Deu");
-            }
-            try{
-            
-            }
-            catch(Exception e){
-                System.out.println("NAO FOI");
-            }
-            String inserir = "INSERT INTO Imagem "+"(idImagem,idLocal,descricao,seguranca,transporte,lazer,Imagem)"+"VALUES(?,1,?,?,?,?,?)";
-            PreparedStatement pst=conectar.prepareStatement(inserir);
-            FileInputStream archivofoto;
-            
-            pst.setString(3,jTextArea1.getText());
-            pst.setString(4,jTextField5.getText());
-            pst.setString(5,jTextField4.getText());
-            pst.setString(6,jTextField6.getText());
-            archivofoto= new FileInputStream(jTextField7.getText());
-                pst.setBinaryStream(7, archivofoto);
-            int i=pst.executeUpdate();
-            if(i>0){
-                JOptionPane.showMessageDialog(null,"Inserido com muito secesso!");
-            }else{
-                JOptionPane.showMessageDialog(null,"Ocorreu algum erro.");
-            }
-
-        }catch (SQLException ex) {
-            Logger.getLogger(Conectar.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Tela_cadastro.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            // TODO add your handling code here:
+        conn = new Inserir();
+        Connection reg = conn.Inserir();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
