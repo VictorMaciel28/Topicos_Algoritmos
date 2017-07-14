@@ -183,7 +183,7 @@ public class Tela_cadastro extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\background.jpg")); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 570, 540);
+        jLabel9.setBounds(-10, 0, 570, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -208,8 +208,11 @@ public class Tela_cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        conn = new Inserir();
-        Connection reg = conn.Inserir();
+        String sql = "INSERT INTO Imagem (idLocal,descricao,seguranca,transporte,lazer,Imagem) VALUES(1,null,"
+                    + jTextField4.getText() +","+ jTextField5.getText() + "," + jTextField6.getText() + 
+                    ",null);";    
+        conn = new Inserir(sql);
+      //  Connection reg = conn.Inserir();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed

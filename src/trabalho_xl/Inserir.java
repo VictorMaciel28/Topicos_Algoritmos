@@ -5,10 +5,12 @@
  */
 package trabalho_xl;
 
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -19,11 +21,12 @@ import javax.swing.JOptionPane;
  */
 public class Inserir {
     Connection conn = null;
+    Statement Statement = null;
     
     
-    
-    public Inserir(){
-            try{
+    public Inserir(String sql){
+        //FileInputStream archivofoto;    
+        try{
             
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection("jdbc:sqlite:C:\\sqlite\\gui\\SQLiteStudio\\mydb.db"); 
@@ -31,28 +34,38 @@ public class Inserir {
                 JOptionPane.showMessageDialog(null, "Meio que foi.");
             }
             
-            String sql = "INSERT INTO Imagem (idImagem,idLocal,descricao,seguranca,transporte,lazer,Imagem) VALUES(6,1,null,null,null,null,null)";
+            
+            Statement = conn.createStatement();
+           
             PreparedStatement stmt = conn.prepareStatement(sql);
-          
             
+   //         stmt.setString(1,"2");
             
-            int i=stmt.executeUpdate(sql);
-            if(i>0){
-                JOptionPane.showMessageDialog(null,"Inserido com muito secesso!");
-            }else{
-                JOptionPane.showMessageDialog(null,"Ocorreu algum erro.");
-            }
-            stmt.close();
+            Statement.executeUpdate(sql);
             conn.close();
-
-        }catch (SQLException ex) {
-            Logger.getLogger(Conectar.class.getName()).log(Level.SEVERE, null, ex);
+           
+               //archivofoto= new FileInputStream(jTextField7.getText());
+            //stmt.setBinaryStream(5,archivofoto);
+            //if(i>0){
+            //    JOptionPane.showMessageDialog(null,"Inserido com muito secesso!");
+            //}else{
+            //    JOptionPane.showMessageDialog(null,"Ocorreu algum erro.");
+            //}
+            //int i=stmt.executeUpdate(sql);
+            
+            //if(i>0){
+             //   JOptionPane.showMessageDialog(null,"Inserido com muito secesso!");
+            } catch (SQLException ex) {
+            Logger.getLogger(Inserir.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Tela_cadastro.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    } 
+            Logger.getLogger(Inserir.class.getName()).log(Level.SEVERE, null, ex);
+        }//{
+         //       JOptionPane.showMessageDialog(null,"Ocorreu algum erro.");
+         //   }
 
-        public Connection Inserir(){
+        }
+        
+    public Connection Inserir(){
         return conn;
         }
 }

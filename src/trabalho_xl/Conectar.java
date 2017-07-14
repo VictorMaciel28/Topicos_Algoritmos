@@ -38,10 +38,10 @@ public class Conectar {
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection("jdbc:sqlite:C:\\sqlite\\gui\\SQLiteStudio\\mydb.db"); 
             if (conn != null){
-                JOptionPane.showMessageDialog(null, "Meio que foi.");
+                JOptionPane.showMessageDialog(null, "A conexao foi realizada");
             }
             
-            String sql = "INSERT INTO Imagem (idImagem,idLocal,descricao,seguranca,transporte,lazer,Imagem) VALUES('6','1','DROGA','null','null','null','null')";
+            String sql = "INSERT INTO Imagem (idImagem,idLocal,descricao,seguranca,transporte,lazer,Imagem) VALUES('6','1','DROGA,'null','null','null','null')";
             PreparedStatement stmt = conn.prepareStatement(sql);
            
             
