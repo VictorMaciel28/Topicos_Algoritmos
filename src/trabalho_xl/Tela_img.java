@@ -131,11 +131,11 @@ public class Tela_img extends javax.swing.JFrame {
         jPanel1.add(jLabel11);
         jLabel11.setBounds(90, 210, 22, 22);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\SEGURANCAA.jpg")); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\segurança.jpg")); // NOI18N
         jPanel1.add(jLabel12);
         jLabel12.setBounds(20, 50, 160, 160);
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\TRANSPORTEe.jpg")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\transporte.jpg")); // NOI18N
         jPanel1.add(jLabel13);
         jLabel13.setBounds(20, 300, 150, 150);
 

@@ -81,14 +81,14 @@ public class Tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(50, 320, 170, 30);
+        jTextField1.setBounds(70, 320, 170, 30);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(270, 330, 260, 110);
+        jScrollPane1.setBounds(290, 330, 260, 110);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Local:");
@@ -100,7 +100,7 @@ public class Tela_cadastro extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(10, 360, 50, 14);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(50, 400, 170, 30);
+        jTextField3.setBounds(70, 400, 170, 30);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Estado: ");
@@ -120,7 +120,7 @@ public class Tela_cadastro extends javax.swing.JFrame {
         getContentPane().add(jTextField4);
         jTextField4.setBounds(90, 440, 30, 30);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(50, 360, 170, 30);
+        jTextField2.setBounds(70, 360, 170, 30);
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Segurança:");
@@ -170,7 +170,7 @@ public class Tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField7);
-        jTextField7.setBounds(260, 450, 140, 30);
+        jTextField7.setBounds(290, 490, 140, 30);
 
         jToggleButton1.setText("Inserir!");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -179,11 +179,11 @@ public class Tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jToggleButton1);
-        jToggleButton1.setBounds(420, 450, 110, 30);
+        jToggleButton1.setBounds(440, 490, 110, 30);
 
         jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\Desktop\\Topicos_Algoritmos\\Topicos_Algoritmos\\background.jpg")); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(-10, 0, 570, 540);
+        jLabel9.setBounds(0, 0, 630, 580);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

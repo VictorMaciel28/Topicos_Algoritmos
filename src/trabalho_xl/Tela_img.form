@@ -259,7 +259,7 @@
         <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\victo\Desktop\Topicos_Algoritmos\Topicos_Algoritmos\SEGURANCAA.jpg"/>
+              <Image iconType="2" name="C:\Users\victo\Desktop\Topicos_Algoritmos\Topicos_Algoritmos\seguran&#xe7;a.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -271,7 +271,7 @@
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\victo\Desktop\Topicos_Algoritmos\Topicos_Algoritmos\TRANSPORTEe.jpg"/>
+              <Image iconType="2" name="C:\Users\victo\Desktop\Topicos_Algoritmos\Topicos_Algoritmos\transporte.jpg"/>
             </Property>
           </Properties>
           <Constraints>
